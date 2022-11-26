@@ -102,6 +102,83 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    let buttons = document.getElementById('error-btns').getElementsByTagName('button');
+
+    buttons[0].addEventListener('click', e => {
+      console.log('Console Log Demo');
+    });
+
+    buttons[1].addEventListener('click', e => {
+      console.error('Console Error Demo');
+    });
+
+    buttons[2].addEventListener('click', e => {
+      console.count('Count Button');
+    });
+
+    buttons[3].addEventListener('click', e => {
+      console.warn('Console Warn Demo');
+    });
+
+    buttons[4].addEventListener('click', e => {
+      let number = 2;
+      let errorMsg = 'the number does not equal 3';
+      console.assert(number == 3, '%o', {number, errorMsg});
+    });
+
+    buttons[5].addEventListener('click', e => {
+      console.clear();
+    });
+
+    buttons[6].addEventListener('click', e => {
+      console.dir(errorBtns[0]);
+    });
+
+    buttons[7].addEventListener('click', e => {
+      console.dirxml(errorBtns[0]);
+    });
+
+    buttons[8].addEventListener('click', e => {
+      console.group('Group');
+    });
+
+    buttons[9].addEventListener('click', e => {
+      console.groupEnd('Group End');
+    });
+
+    buttons[10].addEventListener('click', e => {
+      const tableDisp = [
+        {name: "Software Engineering", num: 110},
+        {name: "Computer Architecture", num: 141},
+        {name: "Computer Vision", num: 160}
+      ];
+      console.table(tableDisp);
+    });
+
+    buttons[11].addEventListener('click', e => {
+      console.time('Timer Button');
+    });
+
+    buttons[12].addEventListener('click', e => {
+      console.timeEnd('Timer Button');
+    });
+
+    buttons[13].addEventListener('click', e => {
+      function deepest(){
+        function deeper(){
+          function deep(){
+            console.trace('Trace');
+          }
+          deep();
+        }
+        deeper();
+      }
+      deepest();
+    });
+
+    buttons[14].addEventListener('click', e => {
+      window.onerror;
+    });
   </script>
 </body>
 
